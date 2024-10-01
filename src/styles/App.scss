@@ -1,0 +1,73 @@
+$primary-color: #28a745;
+$secondary-color: #dc3545;
+$text-color: #333;
+
+.expense-app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f9f9f9;
+
+  h1 {
+    font-size: 2rem;
+    color: $text-color;
+  }
+
+  .expense-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+
+    input {
+      padding: 10px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      padding: 10px;
+      background-color: $primary-color;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
+    }
+  }
+
+  .summary {
+    margin-top: 20px;
+    h3 {
+      color: $text-color;
+      font-size: 1.5rem;
+    }
+  }
+
+  .transaction-list {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+
+    li {
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: #fff;
+
+      &.income {
+        color: $primary-color;
+      }
+
+      &.expense {
+        color: $secondary-color;
+      }
+    }
+  }
+}
